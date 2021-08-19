@@ -1,2 +1,2 @@
 # boostcourse_iOS_Part3
-boostcourse iOS 프로젝트 Part3
+boostcourse iOS 앱 프로그래밍 Part3
