@@ -11,6 +11,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tableView: UITableView!
     let cellIdentifier: String = "cell"
+    let customCellIdentifier: String = "customCell"
     
     let korean: [String] = ["가", "나", "다", "라", "마", "바", "사"," 아", "자", "차","카","타","파","하"]
     
@@ -21,9 +22,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let dateFormatter: DateFormatter = {
         let formatter: DateFormatter = DateFormatter()
         formatter.dateStyle = .medium
+        return formatter
+    }()
+    
+    let timeFormatter: DateFormatter = {
+        let formatter: DateFormatter = DateFormatter()
         formatter.timeStyle = .medium
         return formatter
     }()
+    
     
     @IBAction func touchUpAddButton(_ sender: UIButton){
         dates.append(Date())
@@ -52,17 +59,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for: indexPath)
+       
         if indexPath.section < 2 {
+            let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for: indexPath)
+            
             let text: String = indexPath.section == 0 ? korean[indexPath.row] : english[indexPath.row]
             cell.textLabel?.text = text
+            
+            return cell
         }else{
-            cell.textLabel?.text = self.dateFormatter.string(from: self.dates[indexPath.row])
+            let cell: CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: self.customCellIdentifier, for: indexPath) as! CustomTableViewCell
+            
+            cell.leftLabel.text = self.dateFormatter.string(from: self.dates[indexPath.row])
+            cell.rightLabel.text = self.timeFormatter.string(from: self.dates[indexPath.row])
+            return cell
         }
-        
-        
-        
-        return cell
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
