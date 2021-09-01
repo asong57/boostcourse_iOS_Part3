@@ -91,5 +91,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         return nil
     }
+    
+    override func prepare(for seque: UIStoryboardSegue, sender: Any?){
+        
+        guard let nextViewController: SecondViewController = seque.destination as? SecondViewController else{
+            return
+        }
+        
+        guard let cell: UITableViewCell = sender as? UITableViewCell else{
+            return
+        }
+        
+        nextViewController.textToSet = cell.textLabel?.text
+    }
 }
 
