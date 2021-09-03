@@ -13,6 +13,7 @@
 		9C1893E526E04DB90094913C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1893E326E04DB90094913C /* Main.storyboard */; };
 		9C1893E726E04DBC0094913C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C1893E626E04DBC0094913C /* Assets.xcassets */; };
 		9C1893EA26E04DBC0094913C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1893E826E04DBC0094913C /* LaunchScreen.storyboard */; };
+		9CB98B1C26E2154E008BA938 /* ImageZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB98B1B26E2154E008BA938 /* ImageZoomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9C1893E626E04DBC0094913C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C1893E926E04DBC0094913C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C1893EB26E04DBC0094913C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CB98B1B26E2154E008BA938 /* ImageZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageZoomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		9C1893DC26E04DB90094913C /* PhotosExample */ = {
 			isa = PBXGroup;
 			children = (
+				9CB98B1B26E2154E008BA938 /* ImageZoomViewController.swift */,
 				9C1893DD26E04DB90094913C /* AppDelegate.swift */,
 				9C1893DF26E04DB90094913C /* SceneDelegate.swift */,
 				9C1893E126E04DB90094913C /* ViewController.swift */,
@@ -140,6 +143,7 @@
 				9C1893E226E04DB90094913C /* ViewController.swift in Sources */,
 				9C1893DE26E04DB90094913C /* AppDelegate.swift in Sources */,
 				9C1893E026E04DB90094913C /* SceneDelegate.swift in Sources */,
+				9CB98B1C26E2154E008BA938 /* ImageZoomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
