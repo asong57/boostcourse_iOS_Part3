@@ -57,6 +57,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <keyCommands>
+                        <keyCommand/>
+                    </keyCommands>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="khT-3J-khv" id="0Kc-cz-jcK"/>
